@@ -1,0 +1,133 @@
+{% comment %} {% include 'Teme/navbar.html' %} {% endcomment %}
+
+{% block content %}
+{% if messages %}
+	{% for message in messages %}
+		<div class="alert alert-{{ message.tags }}">{{ message }}</div>
+	{% endfor %}
+{% endif %}
+
+				
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save & Relax</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      line-height: 150%;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: silver;
+    }
+
+    .header h1 {
+      color: #222222;
+      font-size: 35px;
+      font-family: "Pacifico", cursive;
+    }
+
+    .header .social a {
+      padding: 0 5px;
+      color: #222222;
+    }
+
+    .left {
+      float: left;
+      width: 200px;
+      margin: 0;
+      padding: 1em;
+    }
+
+    .content {
+      margin-left: 190px;
+      border-left: 1px solid #d4d4d4;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    li a.active {
+      background-color: grey;
+      color: white;
+    }
+
+    li a:hover:not(.active) {
+      background-color: black;
+      color: white;
+    }
+    
+    td,
+    th {
+      border: 1px solid #dddddd;
+      padding: 8px;
+    }
+
+    tr:nth-child(1) {
+      background-color: #84e4e2;
+      color: white;
+    }
+
+    tr td i.fas {
+      display: block;
+      font-size: 35px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Save & Relax</h1>
+    </header>
+    <aside class="left">
+      <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="upload">Make Uploads</a></li>
+        <li><a href="logout">Logout</a></li>
+      </ul>
+      <br><br>
+      <p>"Don't be always independent when it comes to learning. Seeking for advice is very important! "<br>- AS Hammawa</p>
+    </aside>
+    <main class="content">				
+	  <h1>Welcome to a safe place</h1>
+	  <p>Where you can upload PDF files and access them later anywhere.</p>
+	  <br><br>
+   <img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    </main>
+  </div>
+</body>
+
+</html>
+{% endblock %}
